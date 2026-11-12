@@ -96,8 +96,28 @@
             color: #444;
             text-align: justify; /* 양쪽 정렬로 깔끔하게 */
         }
+        /* 프로필: 왼쪽 사진, 오른쪽 정보 */
+        .profile {
+            display: flex;
+            gap: 30px;
+            align-items: flex-start;
+        }
+        .profile-photo {
+            width: 180px;
+            height: auto;
+            flex-shrink: 0;
+            border-radius: 4px;
+            box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+        }
+        .profile-info {
+            flex: 1;
+        }
         /* 모바일 화면 대응 (화면이 작아지면 위아래로 배치) */
         @media (max-width: 768px) {
+            .profile {
+                flex-direction: column;
+                align-items: center;
+            }
             .research-item {
                 flex-direction: column;
             }
@@ -124,6 +144,10 @@
 
     <div class="container">
 
+      <div class="profile">
+        <img class="profile-photo" src="profile.png" alt="Youngjin Moon">
+        <div class="profile-info">
+
         <div style="font-size: 17px; font-weight: bold; color: #555; margin-bottom: 10px;">
             YOUNGJIN MOON, Ph.D. (문영진)    
         </div>
@@ -149,9 +173,12 @@
             Research associate professor, Biomedical Eng., University of Ulsan College of Medicine, Seoul, Republic of Korea, 2015- <br>
         </div>
         <div style="font-size: 15px; font-weight: color: #555; margin-bottom: 15px;">
-            Linkedin page: <a href="https://www.linkedin.com/in/youngjin-moon-98219920/" target="_blank" rel="noopener noreferrer" style="color: #0066cc; text-decoration: underline;"> myLinkedIn </a></p>
+            Linkedin page: <a href="https://www.linkedin.com/in/youngjin-moon-98219920/" target="_blank" rel="noopener noreferrer" style="color: #0066cc; text-decoration: underline;"> myLinkedIn </a>
         </div>
-        
+
+        </div>
+      </div>
+
         <br><br>
 
         <div class="section-title">HEART Lab collaborators (updated on Jun. 5, 2026)</div>
